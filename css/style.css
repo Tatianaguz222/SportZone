@@ -1,6 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
 
+/* ========================================
+   1. VARIABLES Y CONFIGURACIÓN GENERAL
+======================================== */
+
 :root {
     --black: #090b0a;
     --panel: #131714;
@@ -26,6 +30,10 @@ a {
     text-decoration: none;
 }
 
+/* ========================================
+   2. NAVBAR - MENÚ DE NAVEGACIÓN
+======================================== */
+
 .navbar {
     min-height: 82px;
     padding: 20px 7%;
@@ -42,7 +50,9 @@ a {
     letter-spacing: -1px;
 }
 
-.logo span, h1 span, h2 span {
+.logo span,
+h1 span,
+h2 span {
     color: var(--green);
 }
 
@@ -61,7 +71,8 @@ nav a:hover {
     color: var(--green);
 }
 
-.nav-button, .primary-button {
+.nav-button,
+.primary-button {
     background: var(--green);
     color: var(--black);
     padding: 14px 20px;
@@ -69,6 +80,10 @@ nav a:hover {
     font-weight: 800;
     display: inline-block;
 }
+
+/* ========================================
+   3. HERO - SECCIÓN PRINCIPAL
+======================================== */
 
 .hero {
     position: relative;
@@ -96,7 +111,9 @@ nav a:hover {
     letter-spacing: 3px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Barlow Condensed', Impact, sans-serif;
     font-weight: 900;
     margin: 15px 0;
@@ -120,7 +137,8 @@ h1 {
     padding: 17px 22px;
 }
 
-.primary-button:hover, .nav-button:hover {
+.primary-button:hover,
+.nav-button:hover {
     background: white;
 }
 
@@ -155,6 +173,10 @@ h1 {
     font-size: 10px;
     letter-spacing: 2px;
 }
+
+/* ========================================
+   4. SPORTS - TARJETAS DEPORTIVAS
+======================================== */
 
 .sports-section {
     padding: 90px 8%;
@@ -197,19 +219,22 @@ h2 {
 }
 
 .running {
-    background-image: linear-gradient(0deg, #090b0a 0%, transparent 85%),
-    url('../img/sport3.jpg');
+    background-image:
+        linear-gradient(0deg, #090b0a 0%, transparent 85%),
+        url('../img/sport3.jpg');
 }
 
 .fitness {
-    background-image: linear-gradient(0deg, #090b0a 0%, transparent 85%),
-    url('../img/sport1.jpg');
+    background-image:
+        linear-gradient(0deg, #090b0a 0%, transparent 85%),
+        url('../img/sport1.jpg');
     background-position: 60% center;
 }
 
 .tennis {
-    background-image: linear-gradient(0deg, #090b0a 0%, transparent 85%),
-    url('../img/sport2.jpg');
+    background-image:
+        linear-gradient(0deg, #090b0a 0%, transparent 85%),
+        url('../img/sport2.jpg');
     background-position: right center;
 }
 
@@ -239,6 +264,10 @@ h2 {
     font-weight: 800;
 }
 
+/* ========================================
+   5. ABOUT US
+======================================== */
+
 .about-section {
     background: #171d17;
     padding: 80px 9%;
@@ -249,6 +278,10 @@ h2 {
     max-width: 550px;
     line-height: 1.9;
 }
+
+/* ========================================
+   6. BOTONES E INTERACCIONES
+======================================== */
 
 button {
     margin-top: 20px;
@@ -269,63 +302,9 @@ button:hover {
     font-weight: 600;
 }
 
-footer {
-    padding: 35px 8%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    border-top: 1px solid #292f2a;
-}
-
-footer p, footer small {
-    color: var(--gray);
-    font-size: 10px;
-    letter-spacing: 1px;
-}
-
-@media (max-width: 700px) {
-    .navbar {
-        flex-wrap: wrap;
-        padding: 20px 5%;
-    }
-
-    nav {
-        order: 3;
-        width: 100%;
-        justify-content: space-between;
-        gap: 10px;
-    }
-
-    .hero {
-        min-height: 620px;
-        padding: 50px 7%;
-        background-position: 40% center;
-    }
-
-    .stats {
-        gap: 22px;
-    }
-
-    .sports-section {
-        padding: 60px 6%;
-    }
-
-    .sports-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .sport-card {
-        min-height: 280px;
-    }
-
-    footer {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    }
-/* Semantic HTML5 sections */
+/* ========================================
+   7. NEWS - NOTICIAS DEPORTIVAS
+======================================== */
 
 .news-section,
 .sports-tips {
@@ -352,9 +331,34 @@ footer p, footer small {
     margin: 28px 0;
 }
 
+/* ========================================
+   8. SPORTS TIPS
+======================================== */
+
 .sports-tips ul {
     padding-left: 24px;
     line-height: 2;
+}
+
+/* ========================================
+   9. FOOTER
+======================================== */
+
+footer {
+    padding: 35px 8%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-top: 1px solid #292f2a;
+}
+
+footer p,
+footer small {
+    color: var(--gray);
+    font-size: 10px;
+    letter-spacing: 1px;
 }
 
 footer address {
@@ -366,4 +370,102 @@ footer address a {
     color: inherit;
 }
 
+/* ========================================
+   10. RESPONSIVE DESIGN - TABLETAS
+======================================== */
 
+@media (min-width: 701px) and (max-width: 950px) {
+
+    .navbar {
+        padding: 20px 5%;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 55px 7%;
+        min-height: 580px;
+    }
+
+    .sports-section {
+        padding: 70px 5%;
+    }
+
+    .sports-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sport-card {
+        min-height: 300px;
+    }
+
+    footer {
+        padding: 30px 5%;
+    }
+}
+
+/* ========================================
+   11. RESPONSIVE DESIGN - CELULARES
+======================================== */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        padding: 20px 5%;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: 620px;
+        padding: 50px 7%;
+        background-position: 40% center;
+    }
+
+    h1 {
+        font-size: clamp(60px, 13vw, 85px);
+    }
+
+    .stats {
+        gap: 22px;
+    }
+
+    .sports-section {
+        padding: 60px 6%;
+    }
+
+    .sports-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sport-card {
+        min-height: 280px;
+    }
+
+    .about-section {
+        padding: 60px 7%;
+    }
+
+    .news-section,
+    .sports-tips {
+        padding: 55px 6%;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
