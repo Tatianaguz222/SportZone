@@ -1,6 +1,17 @@
 
+/* ========================================
+   SPORTZONE - JAVASCRIPT
+   Move Beyond Limits
+======================================== */
+
+
+/* 1. SELECT HTML ELEMENTS */
+
 const button = document.getElementById("motivationButton");
 const message = document.getElementById("message");
+
+
+/* 2. MOTIVATIONAL QUOTES */
 
 const quotes = [
     "Your only limit is the one you set yourself. Keep going!",
@@ -9,7 +20,21 @@ const quotes = [
     "Believe in your progress. You are getting stronger!"
 ];
 
-button.addEventListener("click", function () {
-    const randomIndex = Math.floor(Math.random() * quotes.length);
-    message.textContent = quotes[randomIndex];
-});
+
+/* 3. MOTIVATION BUTTON INTERACTION */
+
+if (button && message) {
+
+    button.addEventListener("click", function () {
+
+        // Generate a random number
+        const randomIndex = Math.floor(
+            Math.random() * quotes.length
+        );
+
+        // Display a random motivational quote
+        message.textContent = quotes[randomIndex];
+
+    });
+
+}
